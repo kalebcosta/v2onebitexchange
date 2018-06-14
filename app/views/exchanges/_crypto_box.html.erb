@@ -1,0 +1,49 @@
+<div class="text-center div-btn mb-0 mt-4 mb-2">
+  <span>MODE:</span>
+    <button class="btn-moeda crypto shadow-sm" id='crypto' >
+      <%= link_to "CRYPTO", coin_box_path, remote: true %>
+    </button>
+</div>
+
+<%= form_tag('/convertcrypto', method: :get, id: 'crypto_form') do %>
+            
+  <%# MOEDA LOCAL %>
+  <div class="form-group moeda mt-1">
+    <label for="exampleFormControlSelect1">Local Currency</label>
+    <%= select_tag 'source_currency', options_for_select(currency_list, 'BTC'), class: 'form-control shadow form-control-lg dropdown', id: 'source_currency' %>
+  </div>
+
+  <%# BOTÃO TROCA %>
+  <div class="text-center div-btn mb-0 mt-3 mb-1">
+    <button class="btn-troca shadow-sm" id='troca' >
+      <i class="fas fa-sync fa-xs"></i>
+    </button>
+  </div>
+
+  <%# MOEDA DESEJADA %>
+  <div class="form-group moeda mt-0">
+    <label for="exampleFormControlSelect1">Desired Currency</label>
+    <%= select_tag 'target_currency', options_for_select(currency_list, 'USD'), class: 'form-control shadow form-control-lg dropdown', id: 'target_currency'%>
+  </div>
+
+  <%# LINHA HR %>
+  <div class="text-center mt-3 div-linha">
+    <hr class="linha shadow">
+  </div>
+
+  <%# QUANTIDADE %>
+  <div class="form-group moeda mb-2">
+    <input type='number' name='amount' id='amount' class='form-control shadow quantidade form-control-lg' placeholder='Amount ($)' step='any' required>
+  </div>
+
+  <%# BOTAO CONVERTER %>
+  <%# <div class="text-center mt-3 mb-3">
+    <button type="submit" class="btn botao shadow">EXCHANGE</button>
+  </div> %>
+
+  <%# RESULTADO %>
+  <div class="form-group moeda mt-2 mb-2">
+    <input type='text' id='result' name='result' class='form-control shadow resultado form-control-lg dropdown' placeholder='RESULT' readonly>
+  </div>
+
+<% end %> <%# -------- Fim%>

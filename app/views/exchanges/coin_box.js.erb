@@ -1,0 +1,45 @@
+
+$("#card").html("<%= escape_javascript(render :partial => 'coin_box') %>");
+
+
+$("#troca").click(function (e) {
+  e.preventDefault();
+
+  const elem1 = $('#source_currency').val();
+  const elem2 = $('#target_currency').val();
+  const selectedOption1 = elem1;
+
+  document.getElementById('source_currency').value = elem2;
+  document.getElementById('target_currency').value = selectedOption1;
+
+  
+});
+
+(function() {
+  $(document).ready(function() {
+    return $('#amount').on('keypress', function(e) {
+      if (e.which === 13) {
+        e.preventDefault();
+        if ($('#exchange_form').attr('action') === '/convert') {
+          $.ajax('/convert', {
+            type: 'GET',
+            dataType: 'json',
+            data: {
+              source_currency: $("#source_currency").val(),
+              target_currency: $("#target_currency").val(),
+              amount: $("#amount").val()
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+              return alert(errorThrown);
+            },
+            success: function(data, text, jqXHR) {
+              return $('#result').val(data.value.toFixed(2));
+            }
+          });
+          return false;
+        }
+      }
+    });
+  });
+
+}).call(this);

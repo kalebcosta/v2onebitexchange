@@ -1,0 +1,140 @@
+.card {
+  background-color: rgba(22, 82, 89, 0.4);
+  border-radius: 25px;
+  border: 5px solid #0993a2;
+  width: 80%;
+}
+
+.div-pai{
+  width: 100%;
+}
+
+.linha {
+  border-color: rgba(22, 82, 89, 0.8);
+  margin: 5% 2%;
+}
+
+.div-linha{
+  margin: 0% 5%;
+}
+
+i{
+  color: #fff;
+  text-shadow: #000;
+}
+
+.btn-troca{
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 20%;
+  margin: 0;
+  cursor:pointer;
+}
+
+.btn-troca:hover{
+  background-color: #2a585e;
+}
+
+.dropdown, .dropdown:focus {
+  border-radius: 10px;
+  border: 3px solid #fff;
+  background-color: #264347;
+  color: #fff;
+}
+
+
+
+option {
+  background-color: #264347;
+  color: #fff;
+}
+
+.quantidade {
+  border-radius: 10px;
+  border: 3px solid #078191;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+}
+
+.moeda {
+  padding: 0 3em;
+  margin: 0;
+}
+
+label {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+.botao {
+  background-color: #246169;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.5em 1.4em;
+}
+
+.botao:hover{
+  background-color: #347e88;
+}
+
+.resultado {
+  text-align: center;
+}
+
+.resultado:read-only{
+  // border-radius: 10px;
+  // border: 3px solid #fff;
+  background-color: #264347;
+  // color: #fff;
+
+}
+
+.s3{
+  color: rgb(3, 95, 107);
+}
+
+.s1 {
+  color: rgb(0, 108, 116);
+}
+
+.coin{
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 2px;
+  margin: 0;
+  cursor:pointer;
+  padding: 0.1em;
+}
+
+.coin:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.crypto{
+  background-color: rgba(1, 49, 71, 0.7);
+  border: 1px solid #fff;
+  border-radius: 2px;
+  margin: 0;
+  cursor:pointer;
+  padding: 0.1em;
+}
+
+.crypto:hover{
+  background-color: rgba(1, 49, 71, 0.9);
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+a:link { 
+  color: #fff;
+}
+
+a:hover { 
+  color: #FFF;
+  text-decoration: none;
+}
